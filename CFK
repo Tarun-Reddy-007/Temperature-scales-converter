@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main() {
+    int a=0;
+    while(a==0)
+    {
+    int choice, nc;
+    float c1,f1,k1,c2,f2,k2,c3,f3,k3;
+    printf("Welcome to Temperature scale converter\n");
+    printf("Enter 1 to convert Celsius scale to Farenheit and Kelvin Scale\n");
+    printf("Enter 2 to convert Farenheit scale to Celsius scale and Kelvin scale\n");
+    printf("Enter 3 to convert Kelvin scale to Celsius scale and Farenheit scale\n");
+    scanf("%d",&choice);
+    if(choice==1)
+    {
+    printf("Enter the value in celsius scale to convert to Farenheit and Kelvin Scale\n");
+    scanf("%f",&c1);
+    f1=(1.8*c1)+32;
+    k1=c1+273;
+    printf("Temperature in Farenheit scale= %f Farenheit\n",f1);
+    printf("Temperature in Kelvin scale= %f Kelvin\n",k1);
+    }
+    else if (choice==2)
+    {
+    printf("Enter the value in Farenheit scale to convert to Celsius and Kelvin scale\n");
+    scanf("%f",&f2);
+    c2=(f2-32)/1.8;
+    k2=c2+273;
+    printf("Temperature in Celsius scale = %f Celsius\n",c2);
+    printf("Temperature in Kelvin scale = %f Kelvin\n",k2);
+    }
+    else if (choice==3)
+    {
+    printf("Enter the value in Kelvin Scale to convert to Celsius and Farenheit scale\n");
+    scanf("%f",&k3);
+    c3=k3-273;
+    f3=(1.8*c3)+32;
+    printf("The temperature in Celsius scale = %f Celsius\n",c3);
+    printf("The temperature in Farenheit scale = %f Fareheit\n,",f3);
+    }
+    else
+    {
+    printf("Wrong choice");
+    }
+    int b;
+    printf("Press 1 to continue with another conversion\npress 0 to exit\n");
+    scanf("%d",&b);
+    if(b==1)
+    {
+    a=0;
+    }
+    else
+    {
+    a++;
+    }
+    }
+    return 0;
+}
